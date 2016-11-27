@@ -329,8 +329,8 @@ def get_maritalstatus_profile(geo_code, geo_level, session):
     maritalstatus_by_sex, t_lit = get_stat_data(
         ['maritalstatus', 'sex'], geo_level, geo_code, session,
         table_fields=['area', 'maritalstatus', 'sex'],
-        recode={'sex': dict(SEX_RECODES)},
-        key_order={'sex': SEX_RECODES.values()},
+        # recode={'sex': dict(SEX_RECODES)},
+        # key_order={'sex': SEX_RECODES.values()},
         percent_grouping=['sex'])
 
     maritalstatus_by_sex = sort_stats_result(maritalstatus_by_sex, 'Female')
